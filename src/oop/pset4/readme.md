@@ -8,7 +8,7 @@ As a traveller I want to track where my suitcase goes, after it leaves the band.
 3. When the plane has arrived, we move it to the plane with a transport cart. 
 3. Once it is on the plane, it is in the cargo area, below the passenger area. It stays there during the flight duration.
 4. Once landed, it is taken by a cart to the arrival's hall. 
-5. There is will be put on the [https://youtu.be/EiVPQp1Q_Zs](Luggage Claiming Band)
+5. There is will be put on the [Luggage Claiming Band](https://youtu.be/EiVPQp1Q_Zs)
 
 The question behind all this is, when will the luggage arrive?
 ## Pay Attention to:
