@@ -30,17 +30,21 @@ public class Airport {
                 .filter(luggage -> securityControl.isAllowedToTravel(luggage))
 
                 // drop the luggage at the drop off stand
+                .map(dropOff::process)
 
-                .map(luggage -> dropOff.process(luggage))
                 // bring the luggage to the storage area
-                .map(luggage -> storageArea.process(luggage))
+                .map(storageArea::process)
+
                 // carry the luggage to the plane with the transport cart
-                .map(luggage -> transportCart.process(luggage))
+                .map(transportCart::process)
+
                 // flight to the destination
-                .map(luggage -> flight.process(luggage))
+                .map(flight::process)
+
                 // carry the luggage to the luggage claim with the transport cart
-                .map(luggage -> transportCart.process(luggage))
-                .map(luggage -> luggageClaim.process(luggage))
+                .map(transportCart::process)
+                .map(luggageClaim::process)
+
                 // pick up the luggage from the luggage claim
                 .collect(Collectors.toList());
 
