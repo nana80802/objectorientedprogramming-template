@@ -1,5 +1,6 @@
 package oop.pset4.util;
 
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 // This class is a utility class
@@ -47,11 +48,19 @@ public class TimeUtils {
         ZoneId originZone = ZoneId.of("Europe/Vienna");
         // obtain the destination zone in a dynamic way
 
+
         ZonedDateTime originTime = time.atZone(originZone);
+
         // obtain the destination time with the destination zone
 
+        ZoneId destinationZoneId = ZoneId.of("Europe/" + destination);
+        ZonedDateTime zonedEDestinationDateTime = originTime.withZoneSameInstant(destinationZoneId);
+
         // use the method formatTime to return the formatted destination time
-        return null;
+
+        String destinationTime = formatTime(zonedEDestinationDateTime);
+
+        return destinationTime;
     }
 
 }
